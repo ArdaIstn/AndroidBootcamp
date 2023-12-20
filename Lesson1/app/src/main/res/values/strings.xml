@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pizza</string>
+    <string name="pizzaBaslik">Beef Cheese</string>
+    <string name="peynir">Cheese</string>
+    <string name="sucuk">Sausage</string>
+    <string name="zeytin">Olive</string>
+    <string name="biber">Pepper</string>
+    <string name="teslimatSuresi">20 min</string>
+    <string name="teslimatBaslik">Delivery</string>
+    <string name="pizzaAciklama">Meat lover,get ready to meet your pizza!</string>
+    <string name="fiyat">$5.98</string>
+    <string name="buton">Add To Chart</string>
+
+
+</resources>
