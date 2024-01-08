@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_acitivity_nav"
+    app:startDestination="@id/mainPage">
+
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.ardaisitan.navigationcomponent.MainPage"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page">
+        <action
+            android:id="@+id/detailDirection"
+            app:destination="@id/detailPage"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/bottomSheetDirection"
+            app:destination="@id/bottomSheetDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPage"
+        android:name="com.ardaisitan.navigationcomponent.DetailPage"
+        android:label="fragment_detail_page"
+        tools:layout="@layout/fragment_detail_page" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="surname"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="integer" />
+        <argument
+            android:name="product"
+            app:argType="com.ardaisitan.navigationcomponent.Products" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetDialogFragment"
+        android:name="com.ardaisitan.navigationcomponent.bottomSheetDialogFragment"
+        android:label="fragment_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_bottom_sheet_dialog" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ardaisitan.navigationcomponent.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

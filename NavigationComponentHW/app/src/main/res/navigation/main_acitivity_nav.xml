@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_acitivity_nav"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.ardaisitan.navigationcomponenthw.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/pageADirection"
+            app:destination="@id/pageA" />
+        <action
+            android:id="@+id/pageXDirection"
+            app:destination="@id/pageX" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageA"
+        android:name="com.ardaisitan.navigationcomponenthw.PageA"
+        android:label="fragment_page_a"
+        tools:layout="@layout/fragment_page_a" >
+        <action
+            android:id="@+id/pageBDirection"
+            app:destination="@id/pageB"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageB"
+        android:name="com.ardaisitan.navigationcomponenthw.PageB"
+        android:label="fragment_page_b"
+        tools:layout="@layout/fragment_page_b" >
+        <action
+            android:id="@+id/pageBtoYDirection"
+            app:destination="@id/pageY" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageX"
+        android:name="com.ardaisitan.navigationcomponenthw.PageX"
+        android:label="fragment_page_x"
+        tools:layout="@layout/fragment_page_x" >
+        <action
+            android:id="@+id/pageYDirection"
+            app:destination="@id/pageY"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageY"
+        android:name="com.ardaisitan.navigationcomponenthw.PageY"
+        android:label="fragment_page_y"
+        tools:layout="@layout/fragment_page_y" >
+        <action
+            android:id="@+id/goHomePage"
+            app:destination="@id/homePage" />
+    </fragment>
+</navigation>
